@@ -16,4 +16,8 @@ RUN apt-get update && \
 
 RUN apt-get clean
 
-ENTRYPOINT ["ranger"]
+COPY /content /
+
+SHELL ["/bin/bash", "-l", "-c"]
+
+ENTRYPOINT ["/run_ranger_internal.sh"]
