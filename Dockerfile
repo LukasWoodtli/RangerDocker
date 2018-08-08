@@ -10,9 +10,10 @@ RUN apt-get update && \
 	atool \
 	w3m \
 	poppler-utils \
-	mediainfo
+	man-db \
+	mediainfo \
+	vim
 
 RUN apt-get clean
 
-ENTRYPOINT ["ranger", "--clean"]
-#ENTRYPOINT ["/bin/bash", "-l"]
+ENTRYPOINT ["ranger"]
